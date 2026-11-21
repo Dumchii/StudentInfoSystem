@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/greenest"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:src="@drawable/wave_overlay"
+            android:scaleType="fitXY"/>
+
+        <FrameLayout
+            android:id="@+id/contentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_bottom"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:layout_width="201dp"
+                android:layout_height="77dp"
+                android:layout_gravity="start|top"
+                android:contentDescription="App logo"
+                android:scaleType="fitCenter"
+                android:src="@drawable/logologologo" />
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:scrollbars="none"
+                android:paddingTop="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="create account"
+                        android:textAlignment="center"
+                        android:textColor="@color/greener"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:paddingTop="20dp"/>
+
+                    <!-- ACCOUNT -->
+                    <TextView
+                        style="@style/Widget.App.SectionLabel"
+                        android:text="Account"/>
+
+                    <EditText
+                        android:id="@+id/etUsername"
+                        style="@style/Widget.App.Field"
+                        android:hint="Username"
+                        android:inputType="textPersonName"/>
+
+                    <EditText
+                        android:id="@+id/etPassword"
+                        style="@style/Widget.App.Field"
+                        android:hint="Password"
+                        android:inputType="textPassword"/>
+
+                    <EditText
+                        android:id="@+id/etConfirmPassword"
+                        style="@style/Widget.App.Field"
+                        android:hint="Confirm Password"
+                        android:inputType="textPassword"/>
+
+                    <!-- STUDENT NAME -->
+                    <TextView
+                        style="@style/Widget.App.SectionLabel"
+                        android:text="Student Name"/>
+
+                    <EditText
+                        android:id="@+id/etLastName"
+                        style="@style/Widget.App.Field"
+                        android:hint="Last Name"
+                        android:inputType="textPersonName|textCapWords"/>
+
+                    <EditText
+                        android:id="@+id/etFirstName"
+                        style="@style/Widget.App.Field"
+                        android:hint="First Name"
+                        android:inputType="textPersonName|textCapWords"/>
+
+                    <EditText
+                        android:id="@+id/etMiddleName"
+                        style="@style/Widget.App.Field"
+                        android:hint="Middle Name"
+                        android:inputType="textPersonName|textCapWords"/>
+
+                    <!-- ACADEMIC INFO -->
+                    <TextView
+                        style="@style/Widget.App.SectionLabel"
+                        android:text="Academic Information"/>
+
+                    <EditText
+                        android:id="@+id/etProgram"
+                        style="@style/Widget.App.Field"
+                        android:hint="Program (e.g. BS Information Technology)"
+                        android:inputType="textCapWords"/>
+
+                    <EditText
+                        android:id="@+id/etSpecialization"
+                        style="@style/Widget.App.Field"
+                        android:hint="Specialization (optional)"
+                        android:inputType="textCapWords"/>
+
+                    <EditText
+                        android:id="@+id/etYearLevel"
+                        style="@style/Widget.App.Field"
+                        android:hint="Year Level (1-4)"
+                        android:inputType="number"/>
+
+                    <Button
+                        android:id="@+id/btnSignUp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:backgroundTint="@color/greenest"
+                        android:text="Sign Up"/>
+
+                    <Button
+                        android:id="@+id/btnHaveAccount"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:minHeight="0dp"
+                        android:minWidth="0dp"
+                        android:padding="8dp"
+                        android:text="Already have an account? Login"
+                        android:textAllCaps="false"
+                        android:textColor="@color/greener"
+                        android:textSize="12sp"/>
+
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>
